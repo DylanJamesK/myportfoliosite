@@ -1,0 +1,1113 @@
+/*
+  _____           _    __      _ _          _____ _         _         _____ _               _   
+ |  __ \         | |  / _|    | (_)        / ____| |       | |       / ____| |             | |  
+ | |__) |__  _ __| |_| |_ ___ | |_  ___   | (___ | |_ _   _| | ___  | (___ | |__   ___  ___| |_ 
+ |  ___/ _ \| '__| __|  _/ _ \| | |/ _ \   \___ \| __| | | | |/ _ \  \___ \| '_ \ / _ \/ _ \ __|
+ | |  | (_) | |  | |_| || (_) | | | (_) |  ____) | |_| |_| | |  __/  ____) | | | |  __/  __/ |_ 
+ |_|   \___/|_|   \__|_| \___/|_|_|\___/  |_____/ \__|\__, |_|\___| |_____/|_| |_|\___|\___|\__|
+                                                       __/ |                                    
+                                                      |___/              
+*/
+* {
+    box-sizing: border-box;
+    font-family: 'Proxima-Nova', sans-serif;
+    cursor:default;
+}
+
+body {
+    background-color: white;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+p{
+    color:#252525;
+}
+
+h2 {
+    color:#252525;
+    font-size: 6vw;
+}
+
+h3 {
+    color: #252525;
+    font-size: 30px;
+}
+h5 {
+    color: #252525;
+    font-size: 12px;
+}
+
+h3:hover {
+    color:#cadb2d;
+    cursor:default;
+    text-decoration: none;
+}
+
+h5:hover {
+    color:#cadb2d;
+    cursor:default;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*
+    __           ____   __           ______           __                            
+   / /   ___    / __/  / /_         / ____/  ____    / /  __  __   ____ ___    ____ 
+  / /   / _ \  / /_   / __/        / /      / __ \  / /  / / / /  / __ `__ \  / __ \
+ / /___/  __/ / __/  / /_         / /___   / /_/ / / /  / /_/ /  / / / / / / / / / /
+/_____/\___/ /_/     \__/         \____/   \____/ /_/   \__,_/  /_/ /_/ /_/ /_/ /_/ 
+
+*/
+
+.leftColumn {
+    float: left;
+    width: 20%;
+    padding: 12px 0px 12px 12px;
+    height: 100vh;
+    border-right: 1.5px solid #252525;
+    background-color: white;
+    overflow: scroll;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Name/Logo at the Top Left Corner
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+#myLogoVideo {
+    max-width: 250px;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    padding-right: 0;
+}
+
+#myName {
+    font-size: 30px;
+    float: left;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Navigation Menu (Different Pages & SVG Icons for Social Media/Resume)
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+.nav-section {
+    height: fit-content;
+    border-bottom: 1.5px solid #252525;
+}
+
+.leftside-footer {
+    min-height: 100px;
+    padding-top: 25px;
+}
+.social-link{
+    width:20%;
+    padding:1%;
+}
+.social-media-link-icons {
+    margin-right:12px;
+    display: flex;
+}
+.spotify-icon {
+    fill:#252525;
+}
+.spotify-icon:hover {
+    fill:#cadb2d;
+}
+.instagram-icon {
+    fill:#252525
+}
+.instagram-icon:hover {
+    fill:#cadb2d;
+}
+.linkedin-icon {
+    fill:#252525;
+}
+.linkedin-icon:hover {
+    fill:#cadb2d;
+}
+.twitter-icon {
+    fill:#252525;
+}
+.twitter-icon:hover {
+    fill:#cadb2d;
+}
+.youtube-icon {
+    fill:#252525;
+}
+.youtube-icon:hover {
+    fill:#cadb2d;
+}
+.resume-icon {
+    fill:#252525;
+}
+.resume-icon:hover {
+    fill:#cadb2d;
+}
+
+#© {
+    font-weight: lighter;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Open/close the mobile device navigation menu (hamburger)
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+.menu {
+    /*margin: 0 30px 0 0;*/
+    margin: none;
+}
+.menu h3 h5 {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none; /* hamburger icon */
+}
+#hamburger{
+    transition: .3s ease;
+}
+#hamburger:hover{
+    color: #cadb2d;
+}
+#toggle{
+    display:none;
+}
+/*
+    ____     _              __     __           ______           __                            
+   / __ \   (_)   ____ _   / /_   / /_         / ____/  ____    / /  __  __   ____ ___    ____ 
+  / /_/ /  / /   / __ `/  / __ \ / __/        / /      / __ \  / /  / / / /  / __ `__ \  / __ \
+ / _, _/  / /   / /_/ /  / / / // /_         / /___   / /_/ / / /  / /_/ /  / / / / / / / / / /
+/_/ |_|  /_/    \__, /  /_/ /_/ \__/         \____/   \____/ /_/   \__,_/  /_/ /_/ /_/ /_/ /_/ 
+               /____/ 
+*/
+
+.rightColumn {
+    float: right;
+    width: 80%;
+    height:100vh;
+    background-color: white;
+    overflow: scroll;
+}
+
+.heading {
+    text-align: center;
+    background-color:#cadb2d;
+    border-bottom: 1.5px solid #252525;
+    height:15%;
+    margin:auto;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.heading .h2{
+    min-width:100%;
+}
+
+.heading-description {
+    font-size: 20;
+    margin:auto;
+}
+.heading-description-container {
+    background-color: white;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+.title-text{
+    font-size: 18px;
+    font-weight: bold;
+}
+.support-text{
+    font-size: 12px;;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   About Me
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+.about-me-container{
+    height:750px;
+    width:auto;
+    margin: 24px 12px 0px 12px;
+    vertical-align: middle;
+    background-color: #252525;
+    box-sizing: border-box;
+}
+#pics-of-me {
+    background-color: #4766af;
+    width:50%;
+    height:50%;
+    float:left;
+    display: flexbox;
+    overflow: hidden;
+}
+#pics-of-me img{
+    object-fit: cover;    
+    width: 100%;
+    height:100%;
+}
+#personal-life {
+    background-color: white;
+    width:25%;
+    height:50%;
+    float:left;
+    display: flexbox;
+    border: 1.5px solid #252525;
+}
+#personal-life p{
+    margin:12px;
+}
+#map-location {
+    background-color: #cadb2d;
+    width:25%;
+    height:50%;
+    float:left;
+    display: flexbox;
+    overflow: hidden;
+}
+#my-interests {
+    background-color: white;
+    border: 1.5px solid #252525;
+    width:50%;
+    height:50%;
+    float:left;
+    display: flexbox;
+    overflow: scroll;
+}
+#my-interests p{
+    margin:12px;
+}
+#my-avatar {
+    background-color: #cadb2d;
+    width:25%;
+    height:50%;
+    float:left;
+    display: flex;
+    overflow: hidden;
+}
+#ThreeD-me{
+    margin:auto;
+    height: 100%;
+}
+#reach-out {
+    background-color: white;
+    border: 1.5px solid #252525;
+    width:25%;
+    height:50%;
+    float:left;
+    display: flexbox;
+    overflow:scroll;
+}
+#reach-out p{
+    margin: 12px;
+}
+#reach-out .resume-icon {
+    margin: auto;
+}
+.contact-me-button {
+    border: 1.5px solid #252525;
+    color:#252525;
+    font-size: 12px;
+    margin:12px;
+    padding:2%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: .2s ease;
+    text-align: center;
+}
+.contact-me-button:hover {
+    color:white;
+    background-color: #cadb2d;
+    border: none;
+    transition: .2s ease;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Contact Form
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+.contact-form-section{
+    background-color: rgb(255, 255, 255);
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 72px;
+    height: 60%;
+    justify-content: center;
+    vertical-align: middle;
+}
+.contact-form{
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.contact-form input[type="text"]{
+    text-align: left;
+    font-size: 12px;
+    color: #252525;
+    border:none;
+    border-bottom: 1.5px solid #252525;
+    height: 10%;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form input[type="text"]:focus{
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #cadb2d;
+    height: 10%;
+    width: 70%;
+}
+.contact-form input[type="text"]:hover{
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #cadb2d;
+}
+.contact-form input[type="email"]{
+    text-align: left;
+    font-size: 12px;
+    color: #252525;
+    border:none;
+    border-bottom: 1.5px solid #252525;
+    height: 10%;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form input[type="email"]:focus{
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #cadb2d;
+    height: 10%;
+    width: 70%;
+}
+.contact-form input[type="email"]:hover{
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #cadb2d;
+}
+.contact-form select[type="purpose"]{
+    all: unset;
+    text-align: left;
+    font-size: .75em;
+    color: rgb(170, 170, 170);
+    border-bottom: 1.5px solid #252525;
+    background: url('https://www.charbase.com/images/glyph/9662') no-repeat right;
+    background-size: 16px;
+    border-radius: 0px;
+    appearance: none;
+    height: 10%;
+    width: 60%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 1.75em;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form select[type="purpose"]:hover{
+    all: unset;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1em;
+    color: rgb(170, 170, 170);
+    border-bottom: 2px solid #cadb2d;
+    background: url('https://www.charbase.com/images/glyph/9662') no-repeat right;
+    background-size: 16px;
+    border-radius: 0px;
+    appearance: none;
+    height: 10%;
+    width: 60%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: auto;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form textarea[type="message"]{
+    text-align: left;
+    font-size: 12px;
+    color: #252525;
+    padding-top: 20px;
+    border:none;
+    border-bottom: 1.5px solid #252525;
+    height: 45%;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form textarea[type="message"]:focus{
+    outline: none;
+    font-size: 16px;
+    height: 65%;
+    width: 70%;
+    border-bottom: 2px solid #cadb2d;
+}
+.contact-form textarea[type="message"]:hover{
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #cadb2d;
+}
+.contact-form input[type="submit"]{
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    font-size: 18px;
+    color: #252525;
+    background-color: white;
+    border: 1.5px solid #252525;
+    padding: 10px;
+    height: 10%;
+    width: 50%;
+    margin: 12px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.contact-form input[type="submit"]:hover{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color:#cadb2d;
+    border-style: none;
+    padding: 10px;
+    height: 10%;
+    width: 60%;
+    justify-content: center;
+    margin: 12px;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Responsive Grid Images (First time using ChatGPT for examples!)
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+  .image-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    margin:12px;
+    position:relative;
+  }
+
+  .shrink {
+    transition: 1s ease;
+    opacity: 1;
+    }
+    
+    .shrink:hover{
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+    transition: .4s ease;
+    cursor:pointer;
+    opacity: 0.4;
+    }
+  
+.grid-item {
+    grid-column: span 1;
+    grid-row: span 1;
+    position: relative;
+  }
+  
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  .grid-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.grid-item-wide{
+    grid-column: span 2;
+    grid-row: span 1;
+    position: relative;
+}
+
+.grid-item-wide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  display: block;
+}
+
+.grid-item-tall {
+    grid-column: span 1;
+    grid-row: span 2;
+    position: relative;
+}
+
+.grid-item-tall img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item-big {
+    grid-column: span 2;
+    grid-row: span 2;
+    position: relative;
+}
+
+.grid-item-big img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Reveal Text about Image (Project) on Hover
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+
+.image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+.image-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image-overlay:hover{
+    opacity: 1;
+}
+.image-overlay:hover > * {
+    transform: translateY(0);
+}
+.overlay-title{
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left:12px;
+    margin-right:12px;
+}
+.overlay-description{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+    margin-right: 0.75em;
+    margin-left: 0.75em;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Modal 'pop-ups' for sharing project information.
+
+   The idea is to have create less pages and instead share project info 
+   with modals- occasionally linking to a separate page for more experimental
+   projects.
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+.modalDialog {
+	position: fixed;
+    height: 100%;
+	font-family: Proxima Nova, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background: rgba(217, 250, 53, 0.8);*/
+    background-color: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 200ms ease-in;
+	-moz-transition: opacity 200ms ease-in;
+	transition: opacity 200ms ease-in;
+	pointer-events: none;
+    overflow: scroll;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 90%;
+    min-height: 90%;
+	position: relative;
+    overflow: scroll;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flexbox;
+	background:white;
+}
+
+.modal-heading {
+    margin: auto;
+    padding:24px;
+    justify-content: center;
+    display: flex;
+    background-color:#cadb2d;
+}
+.modal-text {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.close {
+  padding: 0;
+	color:#252525;
+	line-height: 25px;
+	position: absolute;
+	right: 15px;
+	text-align: center;
+	top: 10px;
+	width: 24px;
+	text-decoration: none;
+  background:none;
+	font-weight: bold;
+    font-size: 40px;
+}
+
+.close:hover { 
+color: #4766af;
+}
+
+.animations-modal-content video{
+    width:85%;
+    height:auto;
+    justify-content: center;
+    margin: auto;
+    padding: 12px;
+    display: block;
+}
+
+
+/* 
+███╗   ███╗███████╗██████╗ ██╗ █████╗                
+████╗ ████║██╔════╝██╔══██╗██║██╔══██╗               
+██╔████╔██║█████╗  ██║  ██║██║███████║               
+██║╚██╔╝██║██╔══╝  ██║  ██║██║██╔══██║               
+██║ ╚═╝ ██║███████╗██████╔╝██║██║  ██║               
+╚██████╗╚██╗═══██╗██╗███████╗██████╗═███████╗███████╗
+██╔═══██╗██║   ██║██║██╔════╝██╔══██╗██╔════╝██╔════╝
+██║   ██║██║   ██║██║█████╗  ██████╔╝█████╗  ███████╗
+██║▄▄ ██║██║   ██║██║██╔══╝  ██╔══██╗██╔══╝  ╚════██║
+╚██████╔╝╚██████╔╝██║███████╗██║  ██║███████╗███████║
+ ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝
+APPARENTLY THESE ARE THE BOOTSTRAP BREAKPOINTS...
+*/
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Mobile First Design : portrait phone & < 575 px
+   Small devices - MOBILE PHONE
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+@media screen and (min-width: 300px) and (max-width:575px){
+    h5 {
+        font-size:35px;
+        padding-right: 9%;
+        line-height: 3px;
+    }
+    .about-recent {
+        padding-top: 12px;
+    }
+    .leftColumn {
+        width: 100%;
+        height: fit-content;
+        padding: 12px;
+    } 
+    .rightColumn {
+        width: 100%;
+        height: 80vh;
+    }
+    #myLogoVideo {
+        max-width: 30%;
+        margin: auto;
+        float:left;
+    }
+    #myName {
+        font-size: 20px;
+        float: left;
+    }
+    .my-logo-section {
+        min-height: 60px;
+        border-bottom: 1.5px solid;
+        background-color: white;
+    }
+    
+    label {
+        display: block;
+        cursor: pointer;
+        width: 26px;
+        float: right;
+    }
+    .menu {
+        text-align: right;
+        width: 100%;
+        display: none;
+        clear: right;
+    }
+    .menu h3 h5 {
+        display: block;
+        border-bottom: solid 1px black;
+        margin: 0;
+        color: white;
+        background-color: black;
+        opacity: 90%;
+    }
+    #toggle:checked + .menu {
+        display:block;
+    }
+
+    #© {
+        font-weight: lighter;
+        font-size: 20px;
+        padding-right: 9%;
+    }
+    .heading-description {
+        font-size: 25px;
+    }
+    .contact-form-section{
+        margin-top:12px;
+    }
+    .contact-form input[type="text"]{
+        height: 20%;
+        width: 90%;
+    }
+    .contact-form input[type="text"]:focus{
+        height: 20%;
+        width: 100%;
+    }
+    .contact-form input[type="email"]{
+        height: 20%;
+        width: 90%;
+    }
+    .contact-form input[type="email"]:focus{
+        height: 20%;
+        width: 100%;
+    }
+    .contact-form select[type="purpose"]{
+        height: 20%;
+        width: 90%;
+        padding-top: 3em;
+    }
+    .contact-form select[type="purpose"]:focus{
+        height: 20%;
+        width: 90%;
+    }
+    .contact-form select[type="purpose"]:hover{
+        height: 20%;
+        width: 90%;
+        padding-top: 2em;
+    }
+    .contact-form textarea[type="message"]{
+        height: 40%;
+        width: 90%;
+    }
+    .contact-form textarea[type="message"]:focus{
+        height: 40%;
+        width: 100%;
+    }
+    .contact-form textarea[type="message"]:hover{
+        height: 40%;
+        width: 90%;
+    }
+    .contact-form input[type="submit"]{
+        height: 10%;
+        width: 80%;
+    }
+    .contact-form input[type="submit"]:focus{
+        height: 20%;
+        width: 90%;
+    }
+    .contact-form input[type="submit"]:hover{
+        height: 15%;
+        width: 80%;
+    }
+    #personal-life{
+        width:50%;
+    }
+    #personal-life p{
+        font-size: 18px;
+    }
+    #map-location{
+        width:100%;
+        background-color: white;
+    }
+    #my-interests{
+        width:100%;
+    }
+    #my-interests p {
+        font-size: 18px;
+    }
+    #my-avatar{
+        width:100%
+    }
+    #reach-out {
+        width:100%;
+        height:70%
+    }
+    #reach-out p{
+        font-size: 18px;
+    }
+    .contact-me-button {
+        border: 1.5px solid #252525;
+        color:#252525;
+        font-size: 30px;
+        margin:12px;
+        padding:8%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: .2s ease;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Small devices (mobile phone landscape): > 575px and < 767px
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+@media screen and (min-width: 575px) and (max-width:767px){
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h5 {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    #myLogoVideo {
+        max-width: 90%;
+        margin: auto;
+        float:left;
+    }
+    #© {
+        font-weight: lighter;
+        font-size: 12px;
+    }
+    .heading-description {
+        font-size: 18px;
+    }
+    #personal-life{
+        width:50%;
+    }
+    #personal-life p{
+        font-size: 18px;
+    }
+    #map-location{
+        width:100%;
+        background-color: white;
+    }
+    #my-interests{
+        width:100%;
+    }
+    #my-interests p {
+        font-size: 18px;
+    }
+    #my-avatar{
+        width:100%
+    }
+    #reach-out {
+        width:100%;
+        height:70%
+    }
+    #reach-out p{
+        font-size: 18px;
+    }
+    .contact-me-button {
+        border: 1.5px solid #252525;
+        color:#252525;
+        font-size: 18px;
+        margin:12px;
+        padding:10%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: .2s ease;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Tablets: > 767px and < 991px
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+@media screen and (min-width: 767px) and (max-width:991px){
+    h5 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    #myLogoVideo {
+        max-width: 90%;
+        margin: auto;
+        float:left;
+    }
+    #© {
+        font-weight: lighter;
+        font-size: 16px;
+    }
+    .heading-description {
+        font-size: 18px;
+    }
+    .contact-me-button {
+        border: 1.5px solid #252525;
+        color:#252525;
+        font-size: 18px;
+        margin:12px;
+        padding:4%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: .2s ease;
+        text-align: center;
+    }
+    
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Desktop: > 992px and < 1199px
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+@media screen and (min-width: 992px) and (max-width:1199px){
+    h5 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    #myLogoVideo {
+        max-width: 95%;
+        margin: auto;
+        float:left;
+    }
+    #© {
+        font-weight: lighter;
+        font-size: 20px;
+    }
+    .heading-description {
+        font-size: 20px;
+    }
+    .contact-me-button {
+        border: 1.5px solid #252525;
+        color:#252525;
+        font-size: 18px;
+        margin:12px;
+        padding:7%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: .2s ease;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+   Big Screens (Large Monitors & TVs): > 1200px
+   --------------------------------------------------------------------------|
+   --------------------------------------------------------------------------|
+*/
+
+@media screen and (min-width: 1200px){
+    h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #© {
+        font-weight: lighter;
+        font-size: 24px;
+    }
+    .heading-description {
+        font-size: 26px;
+    }
+
+    #personal-life p{
+        font-size: 18px;
+    }
+    #my-interests p {
+        font-size: 18px;
+    }
+    #reach-out p{
+        font-size: 18px;
+    }
+    .contact-me-button {
+        border: 1.5px solid #252525;
+        color:#252525;
+        font-size: 18px;
+        margin:12px;
+        padding:3.5%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: .2s ease;
+        text-align: center;
+    }
+}
+
