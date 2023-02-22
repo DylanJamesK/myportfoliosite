@@ -549,6 +549,7 @@ label{
     grid-column: span 1;
     grid-row: span 1;
     position: relative;
+    overflow:hidden;
   }
   
 .grid-item img {
@@ -639,16 +640,19 @@ label{
     font-size: 2em;
     font-weight: bold;
     cursor: pointer;
-    margin-left:12px;
-    margin-right:12px;
+    text-align: center;
+    overflow: hidden;
 }
 .overlay-description{
     font-size: 1.25em;
+    text-align: center;
     margin-top: 0.25em;
     margin-right: 0.75em;
     margin-left: 0.75em;
+    display:flex;
     color: white;
     cursor: pointer;
+    overflow: hidden;
 }
 
 
