@@ -56,6 +56,7 @@ h5:hover {
     display: table;
     clear: both;
 }
+
 /*
     __           ____   __           ______           __                            
    / /   ___    / __/  / /_         / ____/  ____    / /  __  __   ____ ___    ____ 
@@ -779,10 +780,14 @@ APPARENTLY THESE ARE THE BOOTSTRAP BREAKPOINTS...
         width: 100%;
         height: fit-content;
         padding: 12px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     } 
     .rightColumn {
         width: 100%;
         height: 80vh;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     #myLogoVideo {
         max-width: 30%;
