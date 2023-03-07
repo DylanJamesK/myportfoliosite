@@ -531,6 +531,7 @@ label{
     grid-auto-flow: dense;
     margin:12px;
     position:relative;
+    overflow: hidden;
   }
 
   .shrink {
@@ -627,16 +628,20 @@ label{
     opacity: 0;
     transition: 0.25s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 .image-overlay > * {
     transform: translateY(20px);
     transition: transform 0.25s;
+    overflow: hidden;
 }
 .image-overlay:hover{
     opacity: 1;
+    overflow: hidden;
 }
 .image-overlay:hover > * {
     transform: translateY(0);
+    overflow: hidden;
 }
 .overlay-title{
     font-size: 2em;
